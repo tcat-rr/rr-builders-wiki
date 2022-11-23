@@ -5,10 +5,12 @@
 
 ---
 
+Test
 
 {% for objects in site.data.cv2.nodes %}
 <span>{{ object[0] }}:</span>
 
 {% for object in objects %}
 <span> ({ object.ReadOnlyChipName }) </span>
+{% endfor %}
 {% endfor %}
