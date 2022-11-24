@@ -8,8 +8,6 @@ js: script.js
 
 <script src="{{ site.baseurl }}/assets/js/script.js"></script>
 
-<div id="toggle-filter">F</div>
-
 <table>
     <tr>
         <th>Chip Name</th><th>Description</th>

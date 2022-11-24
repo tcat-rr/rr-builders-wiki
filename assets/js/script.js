@@ -10,7 +10,7 @@ function filterTableByName(e) {
     
     var chips = document.getElementsByClassName("chip-name");
     for (var i = 0; i < chips.length; i++) {
-        if(chips[i].innerHTML.toLowerCase().includes(filter)) {
+        if(chips[i].innerHTML.toLowerCase().includes(filter.toLowerCase())) {
             chips[i].parentElement.parentElement.style.display = '';
         } else {
             chips[i].parentElement.parentElement.style.display = 'none';
@@ -23,7 +23,7 @@ function filterTableByDesc(e) {
     
     var chips = document.getElementsByClassName("chip-desc");
     for (var i = 0; i < chips.length; i++) {
-        if(chips[i].innerHTML.toLowerCase().includes(filter)) {
+        if(chips[i].innerHTML.toLowerCase().includes(filter.toLowerCase())) {
             chips[i].parentElement.parentElement.style.display = '';
         } else {
             chips[i].parentElement.parentElement.style.display = 'none';
