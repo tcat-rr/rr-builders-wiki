@@ -6,11 +6,11 @@ descfilter.addEventListener('change', filterTableByDesc);
 
 
 function filterTableByName(e) {
-    var filter = e.target.value;
+    var filter = e.target.value.toLowerCase();
     
     var chips = document.getElementsByClassName("chip-name");
     for (var i = 0; i < chips.length; i++) {
-        if(chips[i].innerHTML.toLowerCase().includes(filter.toLowerCase())) {
+        if(chips[i].innerHTML.toLowerCase().includes(filter)) {
             chips[i].parentElement.parentElement.style.display = '';
         } else {
             chips[i].parentElement.parentElement.style.display = 'none';
@@ -19,11 +19,11 @@ function filterTableByName(e) {
 }
 
 function filterTableByDesc(e) {
-    var filter = e.target.value;
+    var filter = e.target.value.toLowerCase();
     
     var chips = document.getElementsByClassName("chip-desc");
     for (var i = 0; i < chips.length; i++) {
-        if(chips[i].innerHTML.toLowerCase().includes(filter.toLowerCase())) {
+        if(chips[i].innerHTML.toLowerCase().includes(filter)) {
             chips[i].parentElement.parentElement.style.display = '';
         } else {
             chips[i].parentElement.parentElement.style.display = 'none';
