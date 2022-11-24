@@ -8,7 +8,7 @@ js: script.js
 
 <script src="{{ site.baseurl }}/assets/js/script.js"></script>
 
-<table>
+<table style="width:100%">
     <tr>
         <th>Chip Name</th><th>Description</th>
     </tr>
