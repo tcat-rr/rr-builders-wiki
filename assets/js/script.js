@@ -8,7 +8,7 @@ if(document.getElementById('filter-name')) {
 
     namefilter.addEventListener('change', filterTable);
     descfilter.addEventListener('change', filterTable);
-    betafilter.addEventListener('change', filterTable);
+    betafilter.addEventListener('change', filterTableByBeta);
     
 }
 
@@ -16,16 +16,26 @@ function filterTable(e) {
     if(e.target.id == "filter-name") {
         var filter = e.target.value.toLowerCase();
         var chips = document.getElementsByClassName("chip-name");
-    } else if(e.target.id == 'filter-desc') {
+    } else {
         var filter = e.target.value.toLowerCase();
         var chips = document.getElementsByClassName("chip-desc");
-    } else {
-        var filter = e.target.checked;
-        var chips = document.getElementsByClassName("chip-beta");
     }
     
     for (var i = 0; i < chips.length; i++) {
         if(chips[i].innerHTML.toLowerCase().includes(filter)) {
+            chips[i].parentElement.parentElement.style.display = '';
+        } else {
+            chips[i].parentElement.parentElement.style.display = 'none';
+        }
+    }
+}
+
+function filterTableByBeta(e) {
+    var filter = e.target.checked;
+    var chips = document.getElementsByClassName("chip-beta");    
+    
+    for (var i = 0; i < chips.length; i++) {
+        if(filter === true || chips[i].innerHTML.toLowerCase().includes(filter)) {
             chips[i].parentElement.parentElement.style.display = '';
         } else {
             chips[i].parentElement.parentElement.style.display = 'none';

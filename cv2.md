@@ -11,7 +11,7 @@ nav_order: 0
 
 <table style="width:100%; min-width: 400px;">
     <tr>
-        <th style="width:150px">Chip Name</th><th>Description</th><th>Show Beta?</th>
+        <th style="width:150px">Chip Name</th><th>Description</th><th>Beta</th>
     </tr>
     <tr>
         <td>
@@ -21,7 +21,7 @@ nav_order: 0
             <input class="form-control input-block input-sm" id="filter-desc" name="filter-desc" type="text" placeholder="Filter by description..."/>
         </td>
         <td>
-            <input class="form-control input-block input-sm" id="filter-beta" name="filter-beta" type="checkbox" checked="checked"/>
+            <input class="form-control input-block input-sm" id="filter-beta" name="filter-beta" type="checkbox" placeholder = "Show beta?" checked="checked"/>
         </td>
     </tr>
     
